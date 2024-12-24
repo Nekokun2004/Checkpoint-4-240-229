@@ -40,5 +40,5 @@ jobs:
 
     - name: Deploy Application
       run: |
-        bash deploy.sh
+       echo "Deploying application..."
 
