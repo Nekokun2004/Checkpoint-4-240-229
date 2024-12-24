@@ -31,10 +31,14 @@ jobs:
         pytest -v
 
   deploy:
-    needs: build 
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
     - name: Deploy Application
       run: |
-        echo "Deploying application..."
+        bash deploy.sh
+
